@@ -4,7 +4,7 @@
 #include "tkEngine/physics/tkPhysicsGhostObject.h"
 #include "tkEngine/character/tkCharacterController.h"
 
-class Game : public IGameObject
+class Game : public  IGameObject
 {
 public:
 	Game();
@@ -12,5 +12,6 @@ public:
 	bool Start();
 	void Update();
 	prefab::CSkinModelRender* m_skinModelRender = nullptr;		//スキンモデルレンダラー。
+	CQuaternion m_rotation = CQuaternion::Identity;
 };
 
